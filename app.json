@@ -2,7 +2,7 @@
   "id": "7a200f96-1914-42bb-96d2-b7eaa3a2397b",
   "name": "BELLCustomization",
   "publisher": "CBR",
-  "version": "2.0.0.107",
+  "version": "25.0.0.1",
   "brief": "",
   "description": "",
   "privacyStatement": "",
@@ -26,6 +26,7 @@
   ],
   "screenshots": [],
   "platform": "15.0.0.0",
+  "application": "22.0.0.0",
   "idRanges": [
     {
       "from": 50000,
@@ -34,5 +35,5 @@
   ],
   "contextSensitiveHelpUrl": "https://BELLCustomizationBC15.com/help/",
   "showMyCode": true,
-  "runtime": "4.0"
+  "runtime": "12.0"
 }
