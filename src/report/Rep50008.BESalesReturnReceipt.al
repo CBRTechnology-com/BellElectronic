@@ -339,7 +339,7 @@ report 50008 "BE Sales Return Receipt"
             trigger OnAfterGetRecord()
             begin
                 //CurrReport.Language := Language.GetLanguageID("Language Code"); //CBR_SS
-                CurrReport.Language := Language.GetLanguageIdOrDefault("Language Code");
+                CurrReport.Language := LanguageMgt.GetLanguageIdOrDefault("Language Code");
 
                 if PrintCompany then
                     if RespCenter.Get("Responsibility Center") then begin
@@ -461,7 +461,7 @@ report 50008 "BE Sales Return Receipt"
         CompanyInformation: Record "Company Information";
         TempReturnReceiptLine: Record "Return Receipt Line" temporary;
         RespCenter: Record "Responsibility Center";
-        Language: Codeunit Language;
+        LanguageMgt: Codeunit Language;
         TaxArea: Record "Tax Area";
         ReturnReceiptPrinted: Codeunit "Return Receipt - Printed";
         FormatAddress: Codeunit "Format Address";

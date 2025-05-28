@@ -649,7 +649,7 @@ report 50007 "BE Customer Statement"
             begin
                 TempAgingBandBuf.DeleteAll;
                 //CurrReport.Language := Language.GetLanguageID("Language Code"); //CBR_SS
-                CurrReport.Language := Language.GetLanguageIdOrDefault("Language Code");
+                CurrReport.Language := LanguageMgt.GetLanguageIdOrDefault("Language Code");
                 PrintLine := false;
                 Cust2 := Customer;
                 CopyFilter("Currency Filter", TempCurrency2.Code);
@@ -939,7 +939,7 @@ report 50007 "BE Customer Statement"
         Cust2: Record Customer;
         Currency: Record Currency;
         TempCurrency2: Record Currency temporary;
-        Language: Codeunit Language;
+        LanguageMgt: Codeunit Language;
         CustLedgerEntry: Record "Cust. Ledger Entry";
         DetailedCustLedgEntry2: Record "Detailed Cust. Ledg. Entry";
         TempAgingBandBuf: Record "Aging Band Buffer" temporary;

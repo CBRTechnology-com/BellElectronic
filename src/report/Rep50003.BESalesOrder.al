@@ -629,7 +629,7 @@ report 50003 "BE Sales Order"
                     end;
 
                 //CurrReport.Language := Language.GetLanguageID("Language Code"); //CBR_SS
-                CurrReport.Language := Language.GetLanguageIdOrDefault("Language Code");
+                CurrReport.Language := LanguageMgt.GetLanguageIdOrDefault("Language Code");
 
                 FormatDocumentFields("Sales Header");
 
@@ -805,7 +805,7 @@ report 50003 "BE Sales Order"
         TempSalesLine: Record "Sales Line" temporary;
         TempSalesLineAsm: Record "Sales Line" temporary;
         RespCenter: Record "Responsibility Center";
-        Language: Codeunit Language;
+        LanguageMgt: Codeunit Language;
         TempSalesTaxAmtLine: Record "Sales Tax Amount Line" temporary;
         TaxArea: Record "Tax Area";
         Cust: Record Customer;

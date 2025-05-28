@@ -740,7 +740,7 @@ report 50010 "BE Purchase Credit Memo"
             trigger OnAfterGetRecord()
             begin
                 //CurrReport.Language := Language.GetLanguageID("Language Code"); //CBR_SS
-                CurrReport.Language := Language.GetLanguageIdOrDefault("Language Code");
+                CurrReport.Language := LanguageMgt.GetLanguageIdOrDefault("Language Code");
 
                 FormatAddressFields("Purch. Cr. Memo Hdr.");
                 FormatDocumentFields("Purch. Cr. Memo Hdr.");
@@ -836,7 +836,7 @@ report 50010 "BE Purchase Credit Memo"
         DimSetEntry1: Record "Dimension Set Entry";
         DimSetEntry2: Record "Dimension Set Entry";
         RespCenter: Record "Responsibility Center";
-        Language: Codeunit Language;
+        LanguageMgt: Codeunit Language;
         CurrExchRate: Record "Currency Exchange Rate";
         Vend: Record Vendor;
         FormatAddr: Codeunit "Format Address";

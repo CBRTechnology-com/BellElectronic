@@ -401,7 +401,7 @@ report 50011 "BE Purchase Invoice"
                         CompanyInformation."Fax No." := RespCenter."Fax No.";
                     end;
                 //CurrReport.Language := Language.GetLanguageID("Language Code"); //CBR_SS
-                CurrReport.Language := Language.GetLanguageIdOrDefault("Language Code");
+                CurrReport.Language := LanguageMgt.GetLanguageIdOrDefault("Language Code");
 
                 if "Purchaser Code" = '' then
                     Clear(SalesPurchPerson)
@@ -580,7 +580,7 @@ report 50011 "BE Purchase Invoice"
         SalesPurchPerson: Record "Salesperson/Purchaser";
         CompanyInformation: Record "Company Information";
         RespCenter: Record "Responsibility Center";
-        Language: Codeunit Language;
+        LanguageMgt: Codeunit Language;
         TempSalesTaxAmtLine: Record "Sales Tax Amount Line" temporary;
         TaxArea: Record "Tax Area";
         Vend: Record Vendor;

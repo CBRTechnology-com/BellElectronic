@@ -411,7 +411,7 @@ report 50004 "BE RMA Return Authorization"
                         CompanyInformation."Fax No." := RespCenter."Fax No.";
                     end;
                 //CurrReport.Language := Language.GetLanguageID("Language Code"); //CBR_SS
-                CurrReport.Language := Language.GetLanguageIdOrDefault("Language Code");
+                CurrReport.Language := LanguageMgt.GetLanguageIdOrDefault("Language Code");
 
                 if "Salesperson Code" = '' then
                     Clear(SalesPurchPerson)
@@ -519,7 +519,7 @@ report 50004 "BE RMA Return Authorization"
         CompanyInformation: Record "Company Information";
         TempSalesLine: Record "Sales Line" temporary;
         RespCenter: Record "Responsibility Center";
-        Language: Codeunit Language;
+        LanguageMgt: Codeunit Language;
         CompanyAddress: array[8] of Text[50];
         BillToAddress: array[8] of Text[50];
         ShipToAddress: array[8] of Text[50];

@@ -842,7 +842,7 @@ report 50000 "BE Sales Quote"
                     CODEUNIT.Run(CODEUNIT::"Sales-Printed", Header);
 
                 //CurrReport.Language := Language.GetLanguageID("Language Code"); //CBR_SS
-                CurrReport.Language := Language.GetLanguageIdOrDefault("Language Code");
+                CurrReport.Language := LanguageMgt.GetLanguageIdOrDefault("Language Code");
 
                 FormatAddr.GetCompanyAddr("Responsibility Center", RespCenter, CompanyInfo, CompanyAddr);
                 FormatAddr.SalesHeaderBillTo(CustAddr, Header);
@@ -1020,7 +1020,7 @@ report 50000 "BE Sales Quote"
         RespCenter: Record "Responsibility Center";
         WorkDescriptionInstream: InStream;
 
-        Language: Codeunit Language;
+        LanguageMgt: Codeunit Language;
         VATClause: Record "VAT Clause";
         FormatAddr: Codeunit "Format Address";
         FormatDocument: Codeunit "Format Document";

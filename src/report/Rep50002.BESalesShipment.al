@@ -504,7 +504,7 @@ report 50002 "BE - Sales Shipment"
                         CompanyInformation."Fax No." := RespCenter."Fax No.";
                     end;
                 //CurrReport.Language := Language.GetLanguageID("Language Code"); //CBR_SS
-                CurrReport.Language := Language.GetLanguageIdOrDefault("Language Code");
+                CurrReport.Language := LanguageMgt.GetLanguageIdOrDefault("Language Code");
 
                 if "Salesperson Code" = '' then
                     Clear(SalesPurchPerson)
@@ -704,7 +704,7 @@ report 50002 "BE - Sales Shipment"
         TempSalesShipmentLine: Record "Sales Shipment Line" temporary;
         TempSalesShipmentLineAsm: Record "Sales Shipment Line" temporary;
         RespCenter: Record "Responsibility Center";
-        Language: Codeunit Language;
+        LanguageMgt: Codeunit Language;
         TaxArea: Record "Tax Area";
         Cust: Record Customer;
         PostedAsmHeader: Record "Posted Assembly Header";

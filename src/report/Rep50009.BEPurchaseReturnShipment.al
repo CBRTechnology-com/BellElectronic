@@ -320,7 +320,7 @@ report 50009 "BE Purchase Return Shipment"
                         CompanyInformation."Fax No." := RespCenter."Fax No.";
                     end;
                 //CurrReport.Language := Language.GetLanguageID("Language Code"); //CBR_SS
-                CurrReport.Language := Language.GetLanguageIdOrDefault("Language Code");
+                CurrReport.Language := LanguageMgt.GetLanguageIdOrDefault("Language Code");
 
                 if "Purchaser Code" = '' then
                     Clear(SalesPurchPerson)
@@ -422,7 +422,7 @@ report 50009 "BE Purchase Return Shipment"
         ReturnLine: Record "Return Shipment Line";
         OrderLine: Record "Purchase Line";
         RespCenter: Record "Responsibility Center";
-        Language: Codeunit Language;
+        LanguageMgt: Codeunit Language;
         CompanyAddress: array[8] of Text[50];
         BuyFromAddress: array[8] of Text[50];
         ShipToAddress: array[8] of Text[50];

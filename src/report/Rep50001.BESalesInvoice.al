@@ -914,7 +914,7 @@ report 50001 "BE Sales Invoice"
                     CODEUNIT.Run(CODEUNIT::"Sales Inv.-Printed", Header);
 
                 //CurrReport.Language := Language.GetLanguageID("Language Code"); //CBR_SS
-                CurrReport.Language := Language.GetLanguageIdOrDefault("Language Code");
+                CurrReport.Language := LanguageMgt.GetLanguageIdOrDefault("Language Code");
                 if RespCenter.Get("Responsibility Center") then begin
                     FormatAddr.RespCenter(CompanyAddr, RespCenter);
                     CompanyInfo."Phone No." := RespCenter."Phone No.";
@@ -1133,7 +1133,7 @@ report 50001 "BE Sales Invoice"
         SalesSetup: Record "Sales & Receivables Setup";
         Cust: Record Customer;
         RespCenter: Record "Responsibility Center";
-        Language: Codeunit Language;
+        LanguageMgt: Codeunit Language;
         VATClause: Record "VAT Clause";
         TempLineFeeNoteOnReportHist: Record "Line Fee Note on Report Hist." temporary;
         FormatAddr: Codeunit "Format Address";
@@ -1283,7 +1283,7 @@ report 50001 "BE Sales Invoice"
                 TempLineFeeNoteOnReportHist.Insert;
             until LineFeeNoteOnReportHist.Next = 0;
         end else begin
-            LineFeeNoteOnReportHist.SetRange("Language Code", Language.GetUserLanguageCode());
+            LineFeeNoteOnReportHist.SetRange("Language Code", LanguageMgt.GetUserLanguageCode());
             if LineFeeNoteOnReportHist.FindSet then
                 repeat
                     TempLineFeeNoteOnReportHist.Init;

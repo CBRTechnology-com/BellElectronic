@@ -764,7 +764,7 @@ report 50006 "BE Sales Credit Memo"
             trigger OnAfterGetRecord()
             begin
                 //CurrReport.Language := Language.GetLanguageID("Language Code"); //CBR_SS
-                CurrReport.Language := Language.GetLanguageIdOrDefault("Language Code");
+                CurrReport.Language := LanguageMgt.GetLanguageIdOrDefault("Language Code");
 
                 FormatAddressFields("Sales Cr.Memo Header");
                 FormatDocumentFields("Sales Cr.Memo Header");
@@ -886,7 +886,7 @@ report 50006 "BE Sales Credit Memo"
         VATAmountLine: Record "VAT Amount Line" temporary;
         DimSetEntry1: Record "Dimension Set Entry";
         DimSetEntry2: Record "Dimension Set Entry";
-        Language: Codeunit Language;
+        LanguageMgt: Codeunit Language;
         SalesShipmentBuffer: Record "Sales Shipment Buffer" temporary;
         CurrExchRate: Record "Currency Exchange Rate";
         Cust: Record Customer;

@@ -613,7 +613,7 @@ report 50005 "BE Purchase Order"
         SalesPurchPerson: Record "Salesperson/Purchaser";
         CompanyInformation: Record "Company Information";
         RespCenter: Record "Responsibility Center";
-        Language: Record Language;
+        LanguageMgt: Record Language;
         TempSalesTaxAmtLine: Record "Sales Tax Amount Line" temporary;
         TaxArea: Record "Tax Area";
         Vend: Record Vendor;
