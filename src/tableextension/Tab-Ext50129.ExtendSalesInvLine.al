@@ -1,4 +1,4 @@
-tableextension 50111 ExtendSalesLine extends "Sales Line"
+tableextension 50129 ExtendSalesInvLine extends "Sales Invoice Line"
 {
     fields
     {
@@ -9,11 +9,6 @@ tableextension 50111 ExtendSalesLine extends "Sales Line"
         field(50001; "Payment Account"; Code[20])
         {
             Caption = 'Payment Account';
-        }
-        modify("No.")
-        {
-            Caption = 'SKU';
-
         }
     }
 
