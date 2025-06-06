@@ -64,10 +64,10 @@ pageextension 50201 ExtendItemCard extends "Item Card"
         }
         addafter("Qty. on Sales Order")
         {
-            field("Qty. Sold"; "Qty. Sold")
-            {
-                ApplicationArea = all;
-            }
+            // field("Qty. Sold"; "Qty. Sold")
+            // {
+            //     ApplicationArea = all;
+            // }
         }
 
         modify("No.")

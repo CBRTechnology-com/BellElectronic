@@ -52,15 +52,15 @@ tableextension 50101 ExtendItem extends Item
             TableRelation = "Manufacturer Name";
             InitValue = 'Keysight / Agilent';
         }
-        field(50010; "Qty. Sold"; Decimal)
-        {
-            FieldClass = FlowField;
-            DecimalPlaces = 0 : 5;
-            CalcFormula = Sum ("Item Sales Info".quantity WHERE ("Item No." = field ("No.")));
-            Editable = false;
-            AccessByPermission = TableData "item ledger entry" = R;
+        // field(50010; "Qty. Sold"; Decimal)
+        // {
+        //     FieldClass = FlowField;
+        //     DecimalPlaces = 0 : 5;
+        //     CalcFormula = Sum("Item Sales Info".quantity WHERE("Item No." = field("No.")));
+        //     Editable = false;
+        //     AccessByPermission = TableData "item ledger entry" = R;
 
-        }
+        // }
 
 
 

@@ -62,10 +62,10 @@ pageextension 50202 ExtendItemList extends "Item List"
             {
                 ApplicationArea = All;
             }
-            field("Qty. Sold"; "Qty. Sold")
-            {
-                ApplicationArea = all;
-            }
+            // field("Qty. Sold"; "Qty. Sold")
+            // {
+            //     ApplicationArea = all;
+            // }
         }
 
         modify("No.")
@@ -87,7 +87,7 @@ pageextension 50202 ExtendItemList extends "Item List"
                 ApplicationArea = All;
                 Image = Journals;
                 RunObject = page "Item Stock Status Info";
-                RunPageLink = "Item No." = field ("No.");
+                RunPageLink = "Item No." = field("No.");
             }
             action("Item Sales History")
             {
@@ -96,7 +96,7 @@ pageextension 50202 ExtendItemList extends "Item List"
                 ApplicationArea = All;
                 Image = Journals;
                 RunObject = page "Item Sales info";
-                RunPageLink = "Item No." = field ("No.");
+                RunPageLink = "Item No." = field("No.");
             }
         }
     }
