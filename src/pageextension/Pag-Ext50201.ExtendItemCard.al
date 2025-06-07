@@ -64,10 +64,10 @@ pageextension 50201 ExtendItemCard extends "Item Card"
         }
         addafter("Qty. on Sales Order")
         {
-            // field("Qty. Sold"; "Qty. Sold")
-            // {
-            //     ApplicationArea = all;
-            // }
+            field("Qty. Sold"; "Qty. Sold")
+            {
+                ApplicationArea = all;
+            }
         }
 
         modify("No.")
@@ -100,13 +100,32 @@ pageextension 50201 ExtendItemCard extends "Item Card"
             ApplicationArea = ItemTracking;
             Visible = false;
         }
+        addafter(ApplyTemplate)
+        {
+            action("Update Item Sales Info")
+            {
+                Promoted = true;
+                PromotedCategory = Process;
+                ApplicationArea = All;
+                Image = Insert;
+                Caption = 'Update Qty Sold';
+                ToolTip = 'Updates Item Sales Info & Qty Sold';
+
+                trigger OnAction()
+                var
+                    SalesHistoryRec: Record "Item Sales Info";
+                begin
+                    SalesHistoryRec.FillTempTablefromItem("No.");
+                end;
+            }
+        }
 
     }
     trigger OnOpenPage()
     var
         SalesHistoryRec: Record "Item Sales Info";
     begin
-        SalesHistoryRec.FillTempTablefromItem("No.");
+        // SalesHistoryRec.FillTempTablefromItem("No.");
     end;
 
     var
