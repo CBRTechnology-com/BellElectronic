@@ -11,6 +11,15 @@ tableextension 50116 ExtendSalesShipmentHeader extends "Sales Shipment Header"
             Caption = 'Payment Account';
 
         }
+        field(50098; "Shipper Acct No."; Code[20])
+        {
+            Caption = 'Shipper Acct No.';
+
+        }
+        field(50099; Model; Text[100])
+        {
+            Caption = 'Model';
+        }
     }
 
     var

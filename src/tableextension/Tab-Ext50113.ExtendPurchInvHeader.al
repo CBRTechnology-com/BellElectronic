@@ -33,6 +33,10 @@ tableextension 50113 ExtendPurchInvHeader extends "Purch. Inv. Header"
         {
             Caption = 'Memo';
         }
+        field(50098; Model; Text[100])
+        {
+            Caption = 'Model';
+        }
 
     }
 

@@ -6,6 +6,10 @@ tableextension 50119 ExtendPurchCrMemoHdr extends "Purch. Cr. Memo Hdr."
         {
             Caption = 'Memo';
         }
+        field(50098; Model; Text[100])
+        {
+            Caption = 'Model';
+        }
     }
 
     var

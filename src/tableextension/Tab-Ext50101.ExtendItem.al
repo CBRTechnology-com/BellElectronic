@@ -61,7 +61,11 @@ tableextension 50101 ExtendItem extends Item
             AccessByPermission = TableData "item ledger entry" = R;
 
         }
-
+        field(50011; New_Manufacturer; Option)
+        {
+            OptionMembers = " ","Keysight / Agilent","Ametek / Amrel","Ametek / Elgar","Ametek / Sorensen","Ametek / Xantrex","Amplifier Research","Anritsu","Anritsu / Wiltron","Associated Research","Audio Precision","Bird","BK Precision","Chroma","Chroma / Quadtech","Chroma / Associated Research","Clarostat","Ducommun / Wisewave","Electronics & Innovation","ENI (Electronic Navigation Industries)","ETS-Lindgren / EMCO","ETS-Lindgren / Holaday","Fluke","GenRad / IET","GenRad / QuadTech","Giga-tronics / Wavetek","Hughes","IET / QuadTech","Keithley","Kepco","Kikusui","Krytar","Magna-Power","Megger / Biddle","Millitech / Hughes","MI-Wave / TRG","Narda","National Instruments","Phase Matrix / EIP","Polar","Sonoma Instruments","Spellman","Stanford Research","T&C Power Conversion","TDK-Lambda","Tektronix","Valhalla Scientific","Varian / CPI","Weinschel / API","Weinschel Associates","Yokogawa","TDK RF","Huntron","Vitrek","XP Power","Rohde & Schwarz","XP Power / Glassman","Aim-TTi","EA Electro-Automatik","ITECH Electronics";
+            Caption = 'Manufacturer';
+        }
 
 
     }

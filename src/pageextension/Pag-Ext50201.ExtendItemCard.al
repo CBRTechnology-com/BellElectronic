@@ -17,11 +17,16 @@ pageextension 50201 ExtendItemCard extends "Item Card"
         addafter("Common Item No.")
         {
 
-            field("Manufacturer Name"; "Manufacturer Name")
-            {
-                ApplicationArea = all;
-                Caption = 'Manufacturer';
+            // field("Manufacturer Name"; "Manufacturer Name")
+            // {
+            //     ApplicationArea = all;
+            //     Caption = 'Manufacturer';
 
+            // }
+            field(New_Manufacturer; Rec.New_Manufacturer)
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the value of the Manufacturer field.', Comment = '%';
             }
             field(Model; Model)
             {

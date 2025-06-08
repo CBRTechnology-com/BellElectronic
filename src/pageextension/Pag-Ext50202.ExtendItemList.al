@@ -10,11 +10,16 @@ pageextension 50202 ExtendItemList extends "Item List"
                 Visible = FALSE;
 
             }
-            field("Manufacturer Name"; "Manufacturer Name")
+            field(New_Manufacturer; Rec.New_Manufacturer)
             {
                 ApplicationArea = All;
-                Caption = 'Manufacturer';
+                ToolTip = 'Specifies the value of the Manufacturer field.', Comment = '%';
             }
+            // field("Manufacturer Name"; "Manufacturer Name")
+            // {
+            //     ApplicationArea = All;
+            //     Caption = 'Manufacturer';
+            // }
             field(Model; Model)
             {
                 ApplicationArea = all;

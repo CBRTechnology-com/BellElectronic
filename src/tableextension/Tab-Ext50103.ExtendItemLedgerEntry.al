@@ -27,6 +27,10 @@ tableextension 50103 ExtendItemLedgerEntry extends "Item Ledger Entry"
         {
 
         }
+        field(50006; "Item Description 2"; Text[100])
+        {
+            Caption = 'Item Description 2';
+        }
     }
 
     var

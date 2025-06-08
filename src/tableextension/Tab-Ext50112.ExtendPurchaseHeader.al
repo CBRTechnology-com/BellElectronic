@@ -20,7 +20,7 @@ tableextension 50112 ExtendPurchaseHeader extends "Purchase Header"
         field(50095; "Shipping Agent Service Code"; Code[10])
         {
             Caption = 'Shipping Agent Service Code';
-            TableRelation = "Shipping Agent Services".Code WHERE ("Shipping Agent Code" = FIELD ("Shipping Agent Code"));
+            TableRelation = "Shipping Agent Services".Code WHERE("Shipping Agent Code" = FIELD("Shipping Agent Code"));
         }
 
         field(50002; "Shipper Acct No."; Code[20])
@@ -39,6 +39,10 @@ tableextension 50112 ExtendPurchaseHeader extends "Purchase Header"
             Caption = 'Shipper Acct Desc';
             Editable = false;
 
+        }
+        field(50098; Model; Text[100])
+        {
+            Caption = 'Model';
         }
     }
 

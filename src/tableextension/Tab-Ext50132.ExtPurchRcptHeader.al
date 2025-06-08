@@ -39,6 +39,10 @@ tableextension 50132 "Ext_PurchRcptHeader" extends "Purch. Rcpt. Header"
             Editable = false;
 
         }
+        field(50098; Model; Text[100])
+        {
+            Caption = 'Model';
+        }
     }
 
     var

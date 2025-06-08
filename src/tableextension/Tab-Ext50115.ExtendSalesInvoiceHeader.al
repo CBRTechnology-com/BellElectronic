@@ -25,6 +25,10 @@ tableextension 50115 ExtendSalesInvoiceHeader extends "Sales Invoice Header"
         {
             Caption = 'Seller Name';
         }
+        field(50099; Model; Text[100])
+        {
+            Caption = 'Model';
+        }
     }
 
     var
