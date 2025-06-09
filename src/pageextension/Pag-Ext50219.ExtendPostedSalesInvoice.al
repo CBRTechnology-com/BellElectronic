@@ -28,6 +28,15 @@ pageextension 50219 ExtendPostedSalesInvoice extends "Posted Sales Invoice"
                 Editable = false;
             }
         }
+        addafter("Dispute Status")
+        {
+            field(Memo; Memo)
+            {
+                ApplicationArea = All;
+                Caption = 'Memo';
+                Editable = false;
+            }
+        }
 
 
         modify("External Document No.")

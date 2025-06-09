@@ -15,6 +15,14 @@ pageextension 50218 ExtendSalesInvoice extends "Sales Invoice"
             ApplicationArea = all;
             Caption = 'Customer PO Number';
         }
+        addafter("Assigned User ID")
+        {
+            field(Memo; Memo)
+            {
+                ApplicationArea = all;
+                Caption = 'Memo';
+            }
+        }
     }
 
     actions

@@ -23,6 +23,14 @@ pageextension 50204 ExtendsSalesOrder extends "Sales Order"
             ApplicationArea = all;
             Caption = 'Customer PO Number';
         }
+        addafter("Assigned User ID")
+        {
+            field(Memo; Memo)
+            {
+                ApplicationArea = All;
+                Caption = 'Memo';
+            }
+        }
     }
 
 

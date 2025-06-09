@@ -1,1 +1,1 @@
-﻿{"Added":[],"Modified":[],"Removed":[]}
+﻿{"Added":[],"Modified":[{"Id":50213,"Kind":16,"Name":"ExtendPurchaseOrder","Namespace":""},{"Id":50204,"Kind":16,"Name":"ExtendsSalesOrder","Namespace":""},{"Id":50219,"Kind":16,"Name":"ExtendPostedSalesInvoice","Namespace":""},{"Id":50109,"Kind":16,"Name":"ExtendItemLedgerEntry","Namespace":""},{"Id":50218,"Kind":16,"Name":"ExtendSalesInvoice","Namespace":""},{"Id":50215,"Kind":16,"Name":"ExtendsPurchOrderArchive","Namespace":""}],"Removed":[]}

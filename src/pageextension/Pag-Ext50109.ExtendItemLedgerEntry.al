@@ -33,6 +33,14 @@ pageextension 50109 ExtendItemLedgerEntry extends "Item Ledger Entries"
             }
 
         }
+        addafter(Description)
+        {
+            field("Item Description 2"; "Item Description 2")
+            {
+                ApplicationArea = All;
+                Caption = 'Description 2';
+            }
+        }
         modify("Item No.")
         {
             ApplicationArea = All;

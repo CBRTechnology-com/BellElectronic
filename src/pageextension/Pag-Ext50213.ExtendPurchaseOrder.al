@@ -52,6 +52,14 @@ pageextension 50213 ExtendPurchaseOrder extends "Purchase Order"
 
             }
         }
+        addafter("Assigned User ID")
+        {
+            field(Memo; Memo)
+            {
+                ApplicationArea = All;
+                Caption = 'Memo';
+            }
+        }
 
 
     }
