@@ -23,6 +23,7 @@ pageextension 50202 ExtendItemList extends "Item List"
             field(Model; Model)
             {
                 ApplicationArea = all;
+                Editable = false;
             }
             field("Rental Price"; "Rental Price")
             {

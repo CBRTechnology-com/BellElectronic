@@ -10,6 +10,12 @@ pageextension 50214 ExtendPostPurchaseInvoice extends "Posted Purchase Invoice"
                 Caption = 'Seller Name';
                 Editable = false;
             }
+            field(Memo; Memo)
+            {
+                ApplicationArea = All;
+                Caption = 'Memo';
+                Editable = false;
+            }
         }
         addafter(Control60)
         {

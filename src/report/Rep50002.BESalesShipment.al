@@ -3,7 +3,7 @@ report 50002 "BE - Sales Shipment"
     // version NAVNA10.00
 
     DefaultLayout = RDLC;
-    RDLCLayout = './BE - Sales Shipment.rdlc';
+    RDLCLayout = './PostedSalesShipmet.rdl';
     Caption = 'Sales Shipment';
 
     dataset
@@ -181,6 +181,9 @@ report 50002 "BE - Sales Shipment"
                     column(OrderNo_SalesShptHeader; "Sales Shipment Header"."Order No.")
                     {
                     }
+                    column(New_PackageTrackingNoText; "Sales Shipment Header"."Package Tracking No.")
+                    {
+                    }
                     column(PackageTrackingNoText; PackageTrackingNoText)
                     {
                     }
@@ -341,7 +344,7 @@ report 50002 "BE - Sales Shipment"
                         column(BackOrderedCaption; BackOrderedCaptionLbl)
                         {
                         }
-                        column(Manufacturer; Item."Manufacturer Name")
+                        column(Manufacturer; Item.New_Manufacturer)
                         {
                         }
                         column(Model; Item.Model)
