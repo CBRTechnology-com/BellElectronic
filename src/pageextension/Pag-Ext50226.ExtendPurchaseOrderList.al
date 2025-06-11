@@ -8,6 +8,11 @@ pageextension 50226 ExtendPurchaseOrderList extends "Purchase Order List"
             {
                 ApplicationArea = all;
             }
+            field(Model; Rec.Model)
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the value of the Model field.', Comment = '%';
+            }
         }
     }
 

@@ -10,6 +10,11 @@ pageextension 50338 "Ext_PostedPurchCrMemo" extends "Posted Purchase Credit Memo
                 Caption = 'Memo';
                 Editable = false;
             }
+            field(Model; Rec.Model)
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the value of the Model field.', Comment = '%';
+            }
         }
     }
 

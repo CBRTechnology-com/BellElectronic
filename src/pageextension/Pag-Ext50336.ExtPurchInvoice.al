@@ -9,6 +9,11 @@ pageextension 50336 "Ext_PurchInvoice" extends "Purchase Invoice"
                 ApplicationArea = all;
                 Caption = 'Memo';
             }
+            field(Model; Rec.Model)
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the value of the Model field.', Comment = '%';
+            }
         }
     }
 

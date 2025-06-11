@@ -22,6 +22,11 @@ pageextension 50218 ExtendSalesInvoice extends "Sales Invoice"
                 ApplicationArea = all;
                 Caption = 'Memo';
             }
+            field(Model; Rec.Model)
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the value of the Model field.', Comment = '%';
+            }
         }
     }
 

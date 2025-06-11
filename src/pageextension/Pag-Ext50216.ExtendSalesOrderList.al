@@ -7,7 +7,20 @@ pageextension 50216 ExtendSalesOrderList extends "Sales Order List"
             ApplicationArea = all;
             Caption = 'Customer PO Number';
         }
+        addafter("Document Date")
+        {
 
+            field("Payment Account"; Rec."Payment Account")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the value of the Payment Account field.', Comment = '%';
+            }
+            field(Model; Rec.Model)
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the value of the Model field.', Comment = '%';
+            }
+        }
     }
 
     actions

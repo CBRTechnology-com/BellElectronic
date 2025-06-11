@@ -59,6 +59,11 @@ pageextension 50213 ExtendPurchaseOrder extends "Purchase Order"
                 ApplicationArea = All;
                 Caption = 'Memo';
             }
+            field(Model; Rec.Model)
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the value of the Model field.', Comment = '%';
+            }
         }
 
 

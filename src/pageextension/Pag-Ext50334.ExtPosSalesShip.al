@@ -10,6 +10,11 @@ pageextension 50334 "Ext_PosSalesShip" extends "Posted Sales Shipment"
                 Caption = 'Memo';
                 Editable = false;
             }
+            field(Model; Rec.Model)
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the value of the Model field.', Comment = '%';
+            }
         }
     }
 

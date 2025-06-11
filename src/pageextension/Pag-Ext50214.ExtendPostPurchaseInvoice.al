@@ -16,6 +16,11 @@ pageextension 50214 ExtendPostPurchaseInvoice extends "Posted Purchase Invoice"
                 Caption = 'Memo';
                 Editable = false;
             }
+            field(Model; Rec.Model)
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the value of the Model field.', Comment = '%';
+            }
         }
         addafter(Control60)
         {

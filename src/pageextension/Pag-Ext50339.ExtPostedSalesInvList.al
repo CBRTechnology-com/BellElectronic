@@ -1,13 +1,14 @@
-pageextension 50227 ExtendsPostedPurchaseInvoices extends "Posted Purchase Invoices"
+pageextension 50339 "Ext_PostedSalesInvList" extends "Posted Sales Invoices"
 {
     layout
     {
-        addafter("Buy-from Vendor Name")
+        addafter("Due Date")
         {
-            field("Seller Name"; "Seller Name")
+
+            field("Payment Account"; Rec."Payment Account")
             {
-                Caption = 'Seller Name';
                 ApplicationArea = All;
+                ToolTip = 'Specifies the value of the Payment Account field.', Comment = '%';
             }
             field(Model; Rec.Model)
             {
@@ -17,11 +18,8 @@ pageextension 50227 ExtendsPostedPurchaseInvoices extends "Posted Purchase Invoi
         }
     }
 
-    actions
-    {
-        // Add changes to page actions here
-    }
+
 
     var
-        myInt: Integer;
+
 }

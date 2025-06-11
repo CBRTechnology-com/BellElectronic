@@ -30,6 +30,11 @@ pageextension 50204 ExtendsSalesOrder extends "Sales Order"
                 ApplicationArea = All;
                 Caption = 'Memo';
             }
+            field(Model; Rec.Model)
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the value of the Model field.', Comment = '%';
+            }
         }
     }
 

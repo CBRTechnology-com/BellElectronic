@@ -36,6 +36,11 @@ pageextension 50219 ExtendPostedSalesInvoice extends "Posted Sales Invoice"
                 Caption = 'Memo';
                 Editable = false;
             }
+            field(Model; Rec.Model)
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the value of the Model field.', Comment = '%';
+            }
         }
 
 

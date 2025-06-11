@@ -10,6 +10,11 @@ pageextension 50335 "Ext_PosSalesCrMemo" extends "Posted Sales Credit Memo"
                 Caption = 'Memo';
                 Editable = false;
             }
+            field(Model; Rec.Model)
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the value of the Model field.', Comment = '%';
+            }
         }
     }
 
