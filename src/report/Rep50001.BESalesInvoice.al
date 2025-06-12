@@ -3,7 +3,7 @@ report 50001 "BE Sales Invoice"
     // version NAVW19.00.00.43897,NAVNA9.00.00.43897
 
     DefaultLayout = RDLC;
-    RDLCLayout = './BE Sales Invoice.rdlc';
+    RDLCLayout = './PostedSalesInvoice.rdl';
     WordLayout = './BE Sales Invoice.docx';
     Caption = 'Sales - Invoice';
     Permissions = TableData "Sales Shipment Buffer" = rimd;
@@ -17,6 +17,10 @@ report 50001 "BE Sales Invoice"
             DataItemTableView = SORTING("No.");
             RequestFilterFields = "No.", "Sell-to Customer No.", "No. Printed";
             RequestFilterHeading = 'Posted Sales Invoice';
+
+            column(RemainingAmount; RemainingAmount)
+            {
+            }
             column(CompanyAddress1; CompanyAddr[1])
             {
             }
@@ -504,9 +508,12 @@ report 50001 "BE Sales Invoice"
                     AutoFormatExpression = Header."Currency Code";
                     AutoFormatType = 1;
                 }
-                column(Manufacturer; Item."Manufacturer Name")
+                column(Manufacturer; Item.New_Manufacturer)
                 {
                 }
+                // column(Manufacturer; Item."Manufacturer Name")
+                // {
+                // }
                 column(Model; Item.Model)
                 {
                 }
@@ -976,6 +983,9 @@ report 50001 "BE Sales Invoice"
 
                 GetLineFeeNoteOnReportHist("No.");
 
+                CalcFields("Amount Including VAT");
+                RemainingAmount := GetRemainingAmount();
+
                 if LogInteraction and not CurrReport.Preview then begin
                     if "Bill-to Contact No." <> '' then
                         SegManagement.LogDocument(
@@ -1183,6 +1193,7 @@ report 50001 "BE Sales Invoice"
         ShippingAgentServices: Record "Shipping Agent Services";
         SalesShipHeader: Record "Sales Shipment Header";
         Condition: Text;
+        RemainingAmount: Decimal;
 
     local procedure InitLogInteraction()
     begin
@@ -1388,5 +1399,7 @@ report 50001 "BE Sales Invoice"
             until ValueEntry.Next = 0;
         // Bell <<
     end;
+
+
 }
 
